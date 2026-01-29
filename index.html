@@ -21,10 +21,7 @@
       --card: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
     body {
       margin: 0;
@@ -33,7 +30,7 @@
       scroll-behavior: smooth;
     }
 
-    a { text-decoration: none; }
+    a { text-decoration: none; color: var(--primary); }
 
     .container {
       max-width: 1200px;
@@ -76,26 +73,26 @@
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 46px;
       color: var(--dark);
       margin-bottom: 10px;
     }
 
     .hero h2 {
-      font-size: 20px;
+      font-size: 19px;
       color: var(--primary);
       font-weight: 500;
       margin-bottom: 25px;
     }
 
     .hero p {
-      font-size: 16px;
+      font-size: 15px;
       max-width: 640px;
       line-height: 1.8;
     }
 
     .buttons {
-      margin-top: 35px;
+      margin-top: 32px;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
@@ -128,76 +125,89 @@
     }
 
     /* ===== SECTION ===== */
-    section {
-      margin-top: 130px;
-    }
+    section { margin-top: 120px; }
 
     .title {
-      font-size: 36px;
+      font-size: 34px;
       color: var(--dark);
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     .subtitle {
       color: var(--muted);
       max-width: 700px;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
       line-height: 1.8;
+      font-size: 15px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 28px;
     }
 
     .card {
       background: var(--card);
-      padding: 36px;
-      border-radius: 26px;
+      padding: 32px;
+      border-radius: 24px;
       box-shadow: 0 25px 50px rgba(0,0,0,.06);
       transition: .35s;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-    }
+    .card:hover { transform: translateY(-6px); }
 
     .card h3 {
       margin-top: 0;
       color: var(--primary);
+      font-size: 18px;
     }
 
-    /* ===== PRODUCTS ===== */
-    .product-logo {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .product-logo { font-size: 40px; margin-bottom: 12px; }
+
+    /* ===== SERVICES ===== */
+    .service-item h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: var(--primary);
     }
+
+    /* ===== CONTACT ===== */
+    .contact-box {
+      background: linear-gradient(135deg,#ffffff,#f1f5ff);
+      border-radius: 30px;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.08);
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .contact-icon { font-size: 22px; }
 
     /* ===== FIXPOINT HERO ===== */
     .fixpoint {
       background: linear-gradient(135deg, #1e3a8a, #2563eb);
       color: #fff;
       border-radius: 36px;
-      padding: 70px;
+      padding: 65px;
       box-shadow: 0 40px 80px rgba(37,99,235,.4);
     }
 
-    .fixpoint h2 {
-      font-size: 40px;
-      margin-top: 0;
-    }
+    .fixpoint h2 { font-size: 36px; margin-top: 0; }
 
     .fixpoint p {
       max-width: 800px;
       line-height: 1.9;
       opacity: .95;
-    }
-
-    .fixpoint ul {
-      margin-top: 25px;
-      padding-left: 20px;
-      line-height: 1.9;
+      font-size: 15px;
     }
 
     footer {
@@ -208,16 +218,10 @@
     }
 
     @media(max-width:900px){
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .photo {
-        margin: auto;
-      }
-      .buttons {
-        justify-content: center;
-      }
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .photo { margin: auto; }
+      .buttons { justify-content: center; }
+      .contact-box { grid-template-columns: 1fr; padding: 36px; }
     }
   </style>
 </head>
@@ -228,140 +232,92 @@
   <!-- HERO -->
   <div class="hero fade">
     <div class="photo">
-      <!-- GANTI FOTO ASLI -->
       <img src="assets/profile.jpg" alt="Wira Muhammad">
     </div>
-
     <div>
-      <h1>Wira Muhammad</h1>
+      <h1>Muhammad Wira Satria Buana</h1>
       <h2>Software Engineer · System Architect · Digital Innovator</h2>
       <p>
-        Saya adalah pengembang sistem informasi yang fokus membangun
-        aplikasi profesional untuk instansi, rumah sakit, dan organisasi.
-        Berpengalaman dalam backend system, keamanan dokumen digital,
-        dan arsitektur aplikasi berkelanjutan.
+        Pengembang sistem informasi yang fokus membangun aplikasi
+        berbasis web profesional untuk instansi, rumah sakit,
+        dan organisasi dengan pendekatan aman, legal, dan berkelanjutan.
       </p>
-
       <div class="buttons">
         <a href="assets/cv-wira.pdf" class="btn btn-primary" download>⬇ Download CV</a>
-        <a href="#produk" class="btn btn-soft">🚀 Produk Saya</a>
+        <a href="#produk" class="btn btn-soft">🚀 Produk</a>
       </div>
     </div>
   </div>
 
-  <!-- SKILLS -->
+  <!-- KEAHLIAN -->
   <section class="fade">
     <h2 class="title">Keahlian Profesional</h2>
     <p class="subtitle">
-      Kombinasi kemampuan teknis, pemahaman regulasi, dan pengalaman implementasi sistem nyata.
+      Kombinasi teknis, regulasi, dan pengalaman implementasi sistem nyata.
     </p>
-
     <div class="grid">
-      <div class="card">
-        <h3>Backend & System</h3>
-        <p>
-          PHP, MySQL, Java Desktop, REST API, SIMRS Bridging,
-          PDF Engine, Workflow Engine.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Frontend</h3>
-        <p>
-          HTML5, CSS Modern, JavaScript, Bootstrap,
-          UI/UX sistem pemerintahan & korporasi.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Security & Legal</h3>
-        <p>
-          TTE Non Sertifikasi & Tersertifikasi, e-Stamp,
-          audit dokumen digital, compliance.
-        </p>
-      </div>
+      <div class="card"><h3>Backend & System</h3><p>PHP, MySQL, Java, REST API, SIMRS, Workflow</p></div>
+      <div class="card"><h3>Frontend</h3><p>HTML, CSS Modern, JavaScript, Bootstrap</p></div>
+      <div class="card"><h3>Security & Legal</h3><p>TTE, e-Meterai, Audit & Validasi Dokumen</p></div>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- PRODUK -->
   <section id="produk" class="fade">
     <h2 class="title">Produk & Ekosistem</h2>
-    <p class="subtitle">
-      Produk digital yang dikembangkan untuk mendukung transformasi
-      digital organisasi secara terintegrasi.
-    </p>
-
+    <p class="subtitle">Solusi digital terintegrasi untuk operasional organisasi.</p>
     <div class="grid">
-      <div class="card">
-        <div class="product-logo">🏢</div>
-        <h3>FixPoint</h3>
-        <p>Smart Office Management System untuk ticketing IT, manajemen internal, dan workflow digital.</p>
-      </div>
-
-      <div class="card">
-        <div class="product-logo">✍️</div>
-        <h3>FixSignature</h3>
-        <p>Platform tanda tangan digital (TTE) dengan validasi, watermark, dan audit dokumen.</p>
-      </div>
-
-      <div class="card">
-        <div class="product-logo">📄</div>
-        <h3>FixSign</h3>
-        <p>Solusi penandatanganan cepat untuk dokumen internal dan operasional.</p>
-      </div>
-
-      <div class="card">
-        <div class="product-logo">🛒</div>
-        <h3>FixOrder</h3>
-        <p>Sistem pemesanan internal barang, jasa, dan permintaan layanan berbasis web.</p>
-      </div>
-
-      <div class="card">
-        <div class="product-logo">💊</div>
-        <h3>FixApotek</h3>
-        <p>Aplikasi manajemen apotek, stok obat, resep, dan laporan farmasi.</p>
-      </div>
-
-      <div class="card">
-        <div class="product-logo">🏬</div>
-        <h3>FixMart</h3>
-        <p>Sistem kasir & manajemen penjualan sederhana untuk UMKM dan internal kantor.</p>
-      </div>
+      <div class="card"><div class="product-logo">🏢</div><h3>FixPoint</h3><p>Smart Office Management System</p></div>
+      <div class="card"><div class="product-logo">✍️</div><h3>FixSignature</h3><p>Platform tanda tangan digital</p></div>
+      <div class="card"><div class="product-logo">📄</div><h3>FixSign</h3><p>Penandatanganan dokumen cepat</p></div>
+      <div class="card"><div class="product-logo">🛒</div><h3>FixOrder</h3><p>Sistem pemesanan internal</p></div>
+      <div class="card"><div class="product-logo">💊</div><h3>FixApotek</h3><p>Manajemen apotek & resep</p></div>
+      <div class="card"><div class="product-logo">🏬</div><h3>FixMart</h3><p>Sistem kasir & UMKM</p></div>
     </div>
   </section>
 
-  <!-- FIXPOINT DETAIL -->
+  <!-- LAYANAN -->
   <section class="fade">
-    <div class="fixpoint">
-      <h2>FixPoint Ecosystem</h2>
-      <p>
-        <strong>FixPoint</strong> adalah ekosistem aplikasi berbasis web
-        yang dirancang untuk meningkatkan efisiensi kerja,
-        transparansi, dan keamanan data di lingkungan organisasi.
-      </p>
-      <ul>
-        <li>Ticketing IT & Layanan Internal</li>
-        <li>Manajemen Dokumen & Arsip Digital</li>
-        <li>Integrasi TTE & e-Meterai</li>
-        <li>Audit Aktivitas & Monitoring</li>
-        <li>Modular & Mudah Dikembangkan</li>
-      </ul>
+    <h2 class="title">Layanan Jasa</h2>
+    <p class="subtitle">Menerima pengembangan sistem dan website sesuai kebutuhan.</p>
+    <div class="grid">
+      <div class="card service-item"><h4>🌐 Website Profil</h4><p>Personal, instansi, company profile</p></div>
+      <div class="card service-item"><h4>🧩 Aplikasi Web</h4><p>Sistem internal & dashboard custom</p></div>
+      <div class="card service-item"><h4>✍️ TTE & Dokumen</h4><p>Tanda tangan digital & validasi</p></div>
+      <div class="card service-item"><h4>🔗 Integrasi Sistem</h4><p>API & otomasi proses kerja</p></div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="fade">
+    <h2 class="title">Kontak & Media</h2>
+    <div class="contact-box">
+      <div>
+        <div class="contact-item"><div class="contact-icon">📱</div>0821-7784-6209</div>
+        <div class="contact-item"><div class="contact-icon">📧</div><a href="mailto:wiramuhammad16@gmail.com">wiramuhammad16@gmail.com</a></div>
+        <div class="contact-item"><div class="contact-icon">💬</div><a href="https://t.me/wira_muhammad" target="_blank">@wira_muhammad</a></div>
+      </div>
+      <div>
+        <div class="contact-item"><div class="contact-icon">▶️</div>
+          <a href="https://www.youtube.com/@omajib8525/featured" target="_blank">YouTube: Bang Wira</a>
+        </div>
+        <p style="font-size:14px;color:var(--muted)">
+          Edukasi IT, sistem digital, dan pengalaman pengembangan aplikasi.
+        </p>
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Wira Muhammad · <strong>wira.id</strong>
+    © 2026 Muhammad Wira Satria Buana · <strong>wira.id</strong>
   </footer>
 
 </div>
 
 <script>
-  const fades = document.querySelectorAll('.fade');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('show');
-    });
-  }, { threshold: 0.2 });
-
-  fades.forEach(f => observer.observe(f));
+  const fades=document.querySelectorAll('.fade');
+  const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show')),{threshold:.2});
+  fades.forEach(f=>obs.observe(f));
 </script>
 
 </body>
