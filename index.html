@@ -2,11 +2,205 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Wira Muhammad</title>
+  <title>Wira Muhammad | Fullstack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil & Portfolio Wira Muhammad – Fullstack Developer, Creator FixPoint & FixSignature">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --gray: #64748b;
+      --bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .profile {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 700;
+      margin: auto;
+    }
+
+    .profile h1 {
+      margin: 20px 0 5px;
+      font-size: 24px;
+    }
+
+    .profile p {
+      color: var(--gray);
+      margin: 0;
+    }
+
+    .about h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--gray);
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
-  <h1>GitHub Pages BERHASIL</h1>
-  <p>Akun: wira17</p>
-  <p>Website sudah aktif 🎉</p>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="profile">
+        <div class="avatar">WM</div>
+        <h1>Wira Muhammad</h1>
+        <p>Fullstack Web Developer</p>
+      </div>
+
+      <div class="about">
+        <h2>Halo 👋</h2>
+        <p>
+          Saya <strong>Wira Muhammad</strong>, seorang Fullstack Web Developer yang
+          fokus membangun sistem informasi profesional untuk
+          <strong>rumah sakit, instansi, dan manajemen internal</strong>.
+        </p>
+        <p>
+          Saya adalah creator dari <strong>FixPoint</strong> (Smart Office Management System)
+          dan <strong>FixSignature</strong> (Tanda Tangan Elektronik & E-Stamp Non Sertifikasi).
+        </p>
+      </div>
+    </header>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2 class="section-title">Produk & Proyek</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>FixPoint</h3>
+          <p>Smart Office Management System dengan fitur ticketing IT, manajemen dokumen, dan workflow internal.</p>
+        </div>
+        <div class="card">
+          <h3>FixSignature</h3>
+          <p>Sistem Tanda Tangan Elektronik Non Sertifikasi & E-Stamp untuk dokumen internal instansi.</p>
+        </div>
+        <div class="card">
+          <h3>Aplikasi Apotek</h3>
+          <p>Sistem manajemen apotek berbasis web menggunakan PHP & MySQL.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Backend</h3>
+          <p>PHP, MySQL, Java (Desktop & Bridging SIMRS)</p>
+        </div>
+        <div class="card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, Bootstrap</p>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <p>Git, GitHub, NetBeans, XAMPP</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2 class="section-title">Kontak</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:wiramuhammad16@gmail.com">wiramuhammad16@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/wira17" target="_blank">github.com/wira17</a></p>
+        <p>Website: <a href="https://wira17.github.io" target="_blank">wira17.github.io</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Wira Muhammad — Built with GitHub Pages
+    </footer>
+
+  </div>
+
 </body>
 </html>
