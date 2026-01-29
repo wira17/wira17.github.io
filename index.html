@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Wira Muhammad | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wira Muhammad – Software Engineer & Creator FixPoint">
+  <meta name="description" content="Wira Muhammad – Software Engineer & Creator FixPoint Ecosystem">
 
   <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,15 +12,19 @@
   <style>
     :root {
       --primary: #2563eb;
-      --soft: #eef2ff;
+      --secondary: #1e40af;
+      --accent: #38bdf8;
       --dark: #0f172a;
       --text: #334155;
       --muted: #64748b;
-      --bg: #f8fafc;
+      --bg: linear-gradient(180deg, #f8fafc, #eef2ff);
       --card: #ffffff;
     }
 
-    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
     body {
       margin: 0;
@@ -29,12 +33,12 @@
       scroll-behavior: smooth;
     }
 
-    a { color: var(--primary); text-decoration: none; }
+    a { text-decoration: none; }
 
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
     /* ===== ANIMATION ===== */
@@ -57,11 +61,12 @@
     }
 
     .photo {
-      width: 280px;
-      height: 280px;
-      border-radius: 30px;
+      width: 300px;
+      height: 300px;
+      border-radius: 32px;
       overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,.15);
+      box-shadow: 0 40px 80px rgba(0,0,0,.18);
+      background: #ddd;
     }
 
     .photo img {
@@ -71,7 +76,7 @@
     }
 
     .hero h1 {
-      font-size: 46px;
+      font-size: 48px;
       color: var(--dark);
       margin-bottom: 10px;
     }
@@ -80,47 +85,64 @@
       font-size: 20px;
       color: var(--primary);
       font-weight: 500;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .hero p {
       font-size: 16px;
-      max-width: 600px;
+      max-width: 640px;
+      line-height: 1.8;
     }
 
     .buttons {
-      margin-top: 30px;
+      margin-top: 35px;
       display: flex;
-      gap: 15px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 14px 26px;
+      padding: 14px 28px;
       border-radius: 50px;
       font-size: 14px;
       font-weight: 600;
       border: none;
       cursor: pointer;
+      transition: .3s;
     }
 
     .btn-primary {
       background: var(--primary);
       color: #fff;
+      box-shadow: 0 15px 30px rgba(37,99,235,.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--secondary);
     }
 
     .btn-soft {
-      background: var(--soft);
+      background: #e0e7ff;
       color: var(--primary);
     }
 
     /* ===== SECTION ===== */
-    section { margin-top: 120px; }
+    section {
+      margin-top: 130px;
+    }
 
     .title {
-      font-size: 34px;
+      font-size: 36px;
       color: var(--dark);
-      margin-bottom: 40px;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 50px;
+      line-height: 1.8;
     }
 
     .grid {
@@ -131,41 +153,71 @@
 
     .card {
       background: var(--card);
-      padding: 35px;
-      border-radius: 24px;
+      padding: 36px;
+      border-radius: 26px;
       box-shadow: 0 25px 50px rgba(0,0,0,.06);
+      transition: .35s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
     }
 
     .card h3 {
-      color: var(--primary);
       margin-top: 0;
+      color: var(--primary);
     }
 
-    /* ===== FIXPOINT ===== */
+    /* ===== PRODUCTS ===== */
+    .product-logo {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== FIXPOINT HERO ===== */
     .fixpoint {
       background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      border-radius: 30px;
-      padding: 60px;
+      color: #fff;
+      border-radius: 36px;
+      padding: 70px;
+      box-shadow: 0 40px 80px rgba(37,99,235,.4);
     }
 
     .fixpoint h2 {
-      font-size: 36px;
+      font-size: 40px;
       margin-top: 0;
     }
 
-    .fixpoint p { opacity: .95; }
+    .fixpoint p {
+      max-width: 800px;
+      line-height: 1.9;
+      opacity: .95;
+    }
+
+    .fixpoint ul {
+      margin-top: 25px;
+      padding-left: 20px;
+      line-height: 1.9;
+    }
 
     footer {
       text-align: center;
-      padding: 60px 0;
+      padding: 70px 0;
       color: var(--muted);
       font-size: 14px;
     }
 
     @media(max-width:900px){
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      .photo { margin: auto; }
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .photo {
+        margin: auto;
+      }
+      .buttons {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -176,64 +228,127 @@
   <!-- HERO -->
   <div class="hero fade">
     <div class="photo">
+      <!-- GANTI FOTO ASLI -->
       <img src="assets/profile.jpg" alt="Wira Muhammad">
     </div>
 
     <div>
       <h1>Wira Muhammad</h1>
-      <h2>Software Engineer & System Architect</h2>
+      <h2>Software Engineer · System Architect · Digital Innovator</h2>
       <p>
-        Saya membangun sistem informasi profesional untuk rumah sakit,
-        instansi, dan manajemen internal. Fokus pada keamanan,
-        legalitas, dan keberlanjutan sistem.
+        Saya adalah pengembang sistem informasi yang fokus membangun
+        aplikasi profesional untuk instansi, rumah sakit, dan organisasi.
+        Berpengalaman dalam backend system, keamanan dokumen digital,
+        dan arsitektur aplikasi berkelanjutan.
       </p>
 
       <div class="buttons">
         <a href="assets/cv-wira.pdf" class="btn btn-primary" download>⬇ Download CV</a>
-        <a href="#fixpoint" class="btn btn-soft">🏢 FixPoint</a>
+        <a href="#produk" class="btn btn-soft">🚀 Produk Saya</a>
       </div>
     </div>
   </div>
 
   <!-- SKILLS -->
   <section class="fade">
-    <h2 class="title">Keahlian</h2>
+    <h2 class="title">Keahlian Profesional</h2>
+    <p class="subtitle">
+      Kombinasi kemampuan teknis, pemahaman regulasi, dan pengalaman implementasi sistem nyata.
+    </p>
+
     <div class="grid">
       <div class="card">
-        <h3>Backend</h3>
-        <p>PHP, MySQL, Java Desktop, Bridging SIMRS</p>
+        <h3>Backend & System</h3>
+        <p>
+          PHP, MySQL, Java Desktop, REST API, SIMRS Bridging,
+          PDF Engine, Workflow Engine.
+        </p>
       </div>
       <div class="card">
         <h3>Frontend</h3>
-        <p>HTML, CSS, JavaScript, Bootstrap</p>
+        <p>
+          HTML5, CSS Modern, JavaScript, Bootstrap,
+          UI/UX sistem pemerintahan & korporasi.
+        </p>
       </div>
       <div class="card">
-        <h3>Security</h3>
-        <p>TTE Non Sertifikasi, E-Stamp, Audit Dokumen</p>
+        <h3>Security & Legal</h3>
+        <p>
+          TTE Non Sertifikasi & Tersertifikasi, e-Stamp,
+          audit dokumen digital, compliance.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- FIXPOINT -->
-  <section id="fixpoint" class="fade">
+  <!-- PRODUCTS -->
+  <section id="produk" class="fade">
+    <h2 class="title">Produk & Ekosistem</h2>
+    <p class="subtitle">
+      Produk digital yang dikembangkan untuk mendukung transformasi
+      digital organisasi secara terintegrasi.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="product-logo">🏢</div>
+        <h3>FixPoint</h3>
+        <p>Smart Office Management System untuk ticketing IT, manajemen internal, dan workflow digital.</p>
+      </div>
+
+      <div class="card">
+        <div class="product-logo">✍️</div>
+        <h3>FixSignature</h3>
+        <p>Platform tanda tangan digital (TTE) dengan validasi, watermark, dan audit dokumen.</p>
+      </div>
+
+      <div class="card">
+        <div class="product-logo">📄</div>
+        <h3>FixSign</h3>
+        <p>Solusi penandatanganan cepat untuk dokumen internal dan operasional.</p>
+      </div>
+
+      <div class="card">
+        <div class="product-logo">🛒</div>
+        <h3>FixOrder</h3>
+        <p>Sistem pemesanan internal barang, jasa, dan permintaan layanan berbasis web.</p>
+      </div>
+
+      <div class="card">
+        <div class="product-logo">💊</div>
+        <h3>FixApotek</h3>
+        <p>Aplikasi manajemen apotek, stok obat, resep, dan laporan farmasi.</p>
+      </div>
+
+      <div class="card">
+        <div class="product-logo">🏬</div>
+        <h3>FixMart</h3>
+        <p>Sistem kasir & manajemen penjualan sederhana untuk UMKM dan internal kantor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXPOINT DETAIL -->
+  <section class="fade">
     <div class="fixpoint">
-      <h2>FixPoint</h2>
-      <p><strong>Smart Office Management System</strong></p>
+      <h2>FixPoint Ecosystem</h2>
       <p>
-        FixPoint adalah aplikasi berbasis web buatan Wira Muhammad
-        untuk mendukung digitalisasi kantor, dengan fitur:
+        <strong>FixPoint</strong> adalah ekosistem aplikasi berbasis web
+        yang dirancang untuk meningkatkan efisiensi kerja,
+        transparansi, dan keamanan data di lingkungan organisasi.
       </p>
       <ul>
         <li>Ticketing IT & Layanan Internal</li>
-        <li>Manajemen Dokumen & Workflow</li>
-        <li>Integrasi TTE & E-Stamp</li>
-        <li>Audit & Tracking Aktivitas</li>
+        <li>Manajemen Dokumen & Arsip Digital</li>
+        <li>Integrasi TTE & e-Meterai</li>
+        <li>Audit Aktivitas & Monitoring</li>
+        <li>Modular & Mudah Dikembangkan</li>
       </ul>
     </div>
   </section>
 
   <footer>
-    © 2026 Wira Muhammad · wira.id
+    © 2026 Wira Muhammad · <strong>wira.id</strong>
   </footer>
 
 </div>
@@ -244,7 +359,7 @@
     entries.forEach(e => {
       if (e.isIntersecting) e.target.classList.add('show');
     });
-  }, { threshold: .2 });
+  }, { threshold: 0.2 });
 
   fades.forEach(f => observer.observe(f));
 </script>
