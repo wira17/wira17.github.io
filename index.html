@@ -1,122 +1,260 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profil Wira</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Wira Muhammad | Fullstack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profil profesional Wira Muhammad – Fullstack Developer & Creator FixPoint dan FixSignature" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-soft: #dbeafe;
+      --dark: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
-    .profile-header {
-      background: linear-gradient(135deg, #0d6efd, #6610f2);
-      color: white;
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
       padding: 60px 20px;
-      text-align: center;
     }
-    .profile-header img {
-      width: 150px;
-      height: 150px;
+
+    /* ===== HEADER ===== */
+    .header {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .profile-card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 20px;
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 auto 20px;
     }
+
+    .profile-card h1 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+      color: var(--dark);
+    }
+
+    .profile-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .intro h2 {
+      font-size: 34px;
+      color: var(--dark);
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      font-size: 16px;
+      max-width: 700px;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      margin-bottom: 80px;
+    }
+
     .section-title {
-      font-weight: 600;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #0d6efd;
-      display: inline-block;
-      padding-bottom: 5px;
+      font-size: 26px;
+      color: var(--dark);
+      margin-bottom: 30px;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
     .card {
-      border-radius: 12px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      transition: all .3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    /* ===== FOOTER ===== */
     footer {
-      background-color: #212529;
-      color: #adb5bd;
-      padding: 20px;
       text-align: center;
-      margin-top: 40px;
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .intro h2 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="profile-header">
-    <img src="https://via.placeholder.com/150" alt="Foto Profil">
-    <h1>Wira</h1>
-    <p>Healthcare IT Architect & Web Developer</p>
-    <div>
-      <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-      <a href="#" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
-      <a href="#" class="text-white"><i class="fas fa-envelope fa-lg"></i></a>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="profile-card">
+        <div class="avatar">WM</div>
+        <h1>Wira Muhammad</h1>
+        <p>Fullstack Web Developer</p>
+      </div>
+
+      <div class="intro">
+        <h2>Halo 👋</h2>
+        <p>
+          Saya <strong>Wira Muhammad</strong>, seorang Fullstack Web Developer yang berfokus
+          pada pengembangan <strong>sistem informasi profesional</strong> untuk
+          rumah sakit, instansi, dan manajemen internal.
+        </p>
+        <p>
+          Saya mengembangkan aplikasi dengan pendekatan yang rapi, aman,
+          dan berorientasi pada kebutuhan pengguna serta regulasi.
+        </p>
+      </div>
     </div>
-  </header>
 
-  <!-- Konten -->
-  <main class="container my-5">
-    <!-- Tentang Saya -->
+    <!-- PROJECTS -->
     <section>
-      <h2 class="section-title">Tentang Saya</h2>
-      <p>
-        Saya seorang arsitek IT kesehatan dan web developer yang berfokus pada integrasi sistem rumah sakit, 
-        pengembangan aplikasi radiologi, serta desain UI/UX profesional. 
-        Passion saya adalah menciptakan workflow yang efisien dan tampilan aplikasi yang modern.
-      </p>
-    </section>
+      <h2 class="section-title">Produk & Proyek</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>FixPoint</h3>
+          <p>
+            Smart Office Management System dengan fitur ticketing IT,
+            manajemen dokumen, dan workflow internal instansi.
+          </p>
+        </div>
 
-    <!-- Keahlian -->
-    <section class="mt-5">
-      <h2 class="section-title">Keahlian</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card shadow-sm p-3">
-            <i class="fas fa-code fa-2x text-primary mb-3"></i>
-            <h5>Web Development</h5>
-            <p>PHP, SQL, REST API, Bootstrap, FontAwesome</p>
-          </div>
+        <div class="card">
+          <h3>FixSignature</h3>
+          <p>
+            Sistem Tanda Tangan Elektronik & E-Stamp Non Sertifikasi
+            untuk dokumen internal dan administratif.
+          </p>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm p-3">
-            <i class="fas fa-hospital fa-2x text-success mb-3"></i>
-            <h5>Healthcare IT</h5>
-            <p>SIMRS, PACS, DICOM Worklist, Radiology Integration</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm p-3">
-            <i class="fas fa-paint-brush fa-2x text-warning mb-3"></i>
-            <h5>UI/UX Design</h5>
-            <p>Dashboard modern, menu intuitif, branding profesional</p>
-          </div>
+
+        <div class="card">
+          <h3>Aplikasi Apotek</h3>
+          <p>
+            Aplikasi manajemen apotek berbasis web menggunakan PHP
+            dan MySQL.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Proyek -->
-    <section class="mt-5">
-      <h2 class="section-title">Proyek</h2>
-      <ul class="list-group">
-        <li class="list-group-item">Radiology Worklist App dengan UI profesional</li>
-        <li class="list-group-item">Fix-Sign: aplikasi personal finance & signature</li>
-        <li class="list-group-item">Integrasi SIMRS dengan Orthanc & Modalitas Radiologi</li>
-        <li class="list-group-item">Profil/Biodata page di GitHub Pages</li>
-      </ul>
+    <!-- TECH STACK -->
+    <section>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Backend</h3>
+          <p>PHP, MySQL, Java (Desktop & Bridging SIMRS)</p>
+        </div>
+
+        <div class="card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, Bootstrap</p>
+        </div>
+
+        <div class="card">
+          <h3>Tools</h3>
+          <p>Git, GitHub, NetBeans, XAMPP</p>
+        </div>
+      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Wira. All rights reserved.</p>
-  </footer>
+    <!-- CONTACT -->
+    <section>
+      <h2 class="section-title">Kontak</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:wiramuhammad16@gmail.com">wiramuhammad16@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/wira17" target="_blank">github.com/wira17</a></p>
+        <p>Website: <a href="https://wira17.github.io" target="_blank">wira17.github.io</a></p>
+      </div>
+    </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+      © 2026 Wira Muhammad — Built with GitHub Pages
+    </footer>
+
+  </div>
+
 </body>
 </html>
