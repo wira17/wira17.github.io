@@ -1,260 +1,253 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Wira Muhammad | Fullstack Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Profil profesional Wira Muhammad – Fullstack Developer & Creator FixPoint dan FixSignature" />
+  <meta charset="UTF-8">
+  <title>Wira Muhammad | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wira Muhammad – Software Engineer & Creator FixPoint">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #3b82f6;
-      --primary-soft: #dbeafe;
+      --primary: #2563eb;
+      --soft: #eef2ff;
       --dark: #0f172a;
       --text: #334155;
       --muted: #64748b;
       --bg: #f8fafc;
       --card: #ffffff;
-      --border: #e2e8f0;
     }
 
-    * {
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      scroll-behavior: smooth;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
+    a { color: var(--primary); text-decoration: none; }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
-    /* ===== HEADER ===== */
-    .header {
+    /* ===== ANIMATION ===== */
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all .9s ease;
+    }
+    .fade.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
       display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
       align-items: center;
-      margin-bottom: 80px;
     }
 
-    .profile-card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 40px 30px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    .photo {
+      width: 280px;
+      height: 280px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,.15);
     }
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 42px;
-      font-weight: 700;
-      margin: 0 auto 20px;
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .profile-card h1 {
-      margin: 10px 0 5px;
-      font-size: 24px;
+    .hero h1 {
+      font-size: 46px;
       color: var(--dark);
+      margin-bottom: 10px;
     }
 
-    .profile-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
+    .hero h2 {
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 30px;
     }
 
-    .intro h2 {
-      font-size: 34px;
-      color: var(--dark);
-      margin-bottom: 15px;
-    }
-
-    .intro p {
+    .hero p {
       font-size: 16px;
-      max-width: 700px;
+      max-width: 600px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-soft {
+      background: var(--soft);
+      color: var(--primary);
     }
 
     /* ===== SECTION ===== */
-    section {
-      margin-bottom: 80px;
-    }
+    section { margin-top: 120px; }
 
-    .section-title {
-      font-size: 26px;
+    .title {
+      font-size: 34px;
       color: var(--dark);
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 30px;
     }
 
     .card {
       background: var(--card);
-      border-radius: 16px;
-      padding: 30px;
-      border: 1px solid var(--border);
-      transition: all .3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      padding: 35px;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0,0,0,.06);
     }
 
     .card h3 {
-      margin-top: 0;
       color: var(--primary);
-      font-size: 20px;
+      margin-top: 0;
     }
 
-    .card p {
-      margin-bottom: 0;
-      color: var(--text);
-      font-size: 15px;
+    /* ===== FIXPOINT ===== */
+    .fixpoint {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      border-radius: 30px;
+      padding: 60px;
     }
 
-    /* ===== FOOTER ===== */
+    .fixpoint h2 {
+      font-size: 36px;
+      margin-top: 0;
+    }
+
+    .fixpoint p { opacity: .95; }
+
     footer {
       text-align: center;
-      padding: 40px 0;
+      padding: 60px 0;
       color: var(--muted);
       font-size: 14px;
-      border-top: 1px solid var(--border);
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .header {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .intro h2 {
-        font-size: 28px;
-      }
+    @media(max-width:900px){
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .photo { margin: auto; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
-      <div class="profile-card">
-        <div class="avatar">WM</div>
-        <h1>Wira Muhammad</h1>
-        <p>Fullstack Web Developer</p>
-      </div>
-
-      <div class="intro">
-        <h2>Halo 👋</h2>
-        <p>
-          Saya <strong>Wira Muhammad</strong>, seorang Fullstack Web Developer yang berfokus
-          pada pengembangan <strong>sistem informasi profesional</strong> untuk
-          rumah sakit, instansi, dan manajemen internal.
-        </p>
-        <p>
-          Saya mengembangkan aplikasi dengan pendekatan yang rapi, aman,
-          dan berorientasi pada kebutuhan pengguna serta regulasi.
-        </p>
-      </div>
+  <!-- HERO -->
+  <div class="hero fade">
+    <div class="photo">
+      <img src="assets/profile.jpg" alt="Wira Muhammad">
     </div>
 
-    <!-- PROJECTS -->
-    <section>
-      <h2 class="section-title">Produk & Proyek</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>FixPoint</h3>
-          <p>
-            Smart Office Management System dengan fitur ticketing IT,
-            manajemen dokumen, dan workflow internal instansi.
-          </p>
-        </div>
+    <div>
+      <h1>Wira Muhammad</h1>
+      <h2>Software Engineer & System Architect</h2>
+      <p>
+        Saya membangun sistem informasi profesional untuk rumah sakit,
+        instansi, dan manajemen internal. Fokus pada keamanan,
+        legalitas, dan keberlanjutan sistem.
+      </p>
 
-        <div class="card">
-          <h3>FixSignature</h3>
-          <p>
-            Sistem Tanda Tangan Elektronik & E-Stamp Non Sertifikasi
-            untuk dokumen internal dan administratif.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Aplikasi Apotek</h3>
-          <p>
-            Aplikasi manajemen apotek berbasis web menggunakan PHP
-            dan MySQL.
-          </p>
-        </div>
+      <div class="buttons">
+        <a href="assets/cv-wira.pdf" class="btn btn-primary" download>⬇ Download CV</a>
+        <a href="#fixpoint" class="btn btn-soft">🏢 FixPoint</a>
       </div>
-    </section>
-
-    <!-- TECH STACK -->
-    <section>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Backend</h3>
-          <p>PHP, MySQL, Java (Desktop & Bridging SIMRS)</p>
-        </div>
-
-        <div class="card">
-          <h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript, Bootstrap</p>
-        </div>
-
-        <div class="card">
-          <h3>Tools</h3>
-          <p>Git, GitHub, NetBeans, XAMPP</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section>
-      <h2 class="section-title">Kontak</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:wiramuhammad16@gmail.com">wiramuhammad16@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/wira17" target="_blank">github.com/wira17</a></p>
-        <p>Website: <a href="https://wira17.github.io" target="_blank">wira17.github.io</a></p>
-      </div>
-    </section>
-
-    <footer>
-      © 2026 Wira Muhammad — Built with GitHub Pages
-    </footer>
-
+    </div>
   </div>
+
+  <!-- SKILLS -->
+  <section class="fade">
+    <h2 class="title">Keahlian</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Backend</h3>
+        <p>PHP, MySQL, Java Desktop, Bridging SIMRS</p>
+      </div>
+      <div class="card">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, Bootstrap</p>
+      </div>
+      <div class="card">
+        <h3>Security</h3>
+        <p>TTE Non Sertifikasi, E-Stamp, Audit Dokumen</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXPOINT -->
+  <section id="fixpoint" class="fade">
+    <div class="fixpoint">
+      <h2>FixPoint</h2>
+      <p><strong>Smart Office Management System</strong></p>
+      <p>
+        FixPoint adalah aplikasi berbasis web buatan Wira Muhammad
+        untuk mendukung digitalisasi kantor, dengan fitur:
+      </p>
+      <ul>
+        <li>Ticketing IT & Layanan Internal</li>
+        <li>Manajemen Dokumen & Workflow</li>
+        <li>Integrasi TTE & E-Stamp</li>
+        <li>Audit & Tracking Aktivitas</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Wira Muhammad · wira.id
+  </footer>
+
+</div>
+
+<script>
+  const fades = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('show');
+    });
+  }, { threshold: .2 });
+
+  fades.forEach(f => observer.observe(f));
+</script>
 
 </body>
 </html>
